@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: runner.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.929 sec <<< FAILURE!
+Login to HRM Application(I want to use this template for my Directory Page)  Time elapsed: 0.104 sec  <<< ERROR!
+java.lang.NullPointerException
+	at stepsdefinitions.HRMLogin.user_enters_username_and_password(HRMLogin.java:15)
+	at ✽.user enters Admin and admin123(file:///C:/Users/Consultor/IdeaProjects/CucumberJava_v2/src/test/resources/features/Directory.feature:5)
+
+I want to use this template for my Directory Page(I want to use this template for my Directory Page)  Time elapsed: 0.005 sec  <<< ERROR!
+java.lang.NullPointerException
+	at stepsdefinitions.Directory.user_is_on_directory_page(Directory.java:19)
+	at ✽.user is on directory page(file:///C:/Users/Consultor/IdeaProjects/CucumberJava_v2/src/test/resources/features/Directory.feature:14)
+
