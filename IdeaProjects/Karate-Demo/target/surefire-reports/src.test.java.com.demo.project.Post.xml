@@ -1,0 +1,17 @@
+<testsuite failures="1" name="src/test/java/com/demo/project/Post.feature" skipped="0" tests="1" time="1.309127">
+  <testcase classname="src.test.java.com.demo.project.Post" name="Post Demo 3" time="1.309127">
+    <failure message="Post.feature:29 - status code was: 200, expected: 201, response time: 454, url: https://postman-echo.com/post, response: {&quot;args&quot;:{},&quot;headers&quot;:{&quot;content-length&quot;:&quot;41&quot;,&quot;x-forwarded-proto&quot;:&quot;https&quot;,&quot;host&quot;:&quot;postman-echo.com&quot;,&quot;content-type&quot;:&quot;application/json; charset=UTF-8&quot;,&quot;accept-encoding&quot;:&quot;gzip, br&quot;,&quot;user-agent&quot;:&quot;Apache-HttpClient/4.5.5 (Java/1.8.0_333)&quot;,&quot;accept&quot;:&quot;application/json&quot;},&quot;data&quot;:{&quot;name&quot;:&quot;Carlos Rios&quot;,&quot;job&quot;:&quot;QA Analyst&quot;},&quot;form&quot;:{},&quot;files&quot;:{},&quot;json&quot;:{&quot;name&quot;:&quot;Carlos Rios&quot;,&quot;job&quot;:&quot;QA Analyst&quot;},&quot;url&quot;:&quot;https://postman-echo.com/post&quot;}">* url 'https://postman-echo.com/' ......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/post' ........................................................ passed
+And request {"name": "Carlos Rios", "job": "QA Analyst"} .................. passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Post.feature:29 - status code was: 200, expected: 201, response time: 454, url: https://postman-echo.com/post, response: {"args":{},"headers":{"content-length":"41","x-forwarded-proto":"https","host":"postman-echo.com","content-type":"application/json; charset=UTF-8","accept-encoding":"gzip, br","user-agent":"Apache-HttpClient/4.5.5 (Java/1.8.0_333)","accept":"application/json"},"data":{"name":"Carlos Rios","job":"QA Analyst"},"form":{},"files":{},"json":{"name":"Carlos Rios","job":"QA Analyst"},"url":"https://postman-echo.com/post"}&#13;
+	at ✽.Then status 201 (Post.feature:29)&#13;
+
+And match response == {"name":"Carlos Rios","job":"QA Analyst","id":"#string","createdAt":"#ignore"} . skipped
+And print response ........................................................ skipped</failure>
+  </testcase>
+</testsuite>

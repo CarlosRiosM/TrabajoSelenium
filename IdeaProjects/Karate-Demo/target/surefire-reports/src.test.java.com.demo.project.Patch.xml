@@ -1,0 +1,53 @@
+<testsuite failures="2" name="src/test/java/com/demo/project/Patch.feature" skipped="0" tests="2" time="4.554237">
+  <testcase classname="src.test.java.com.demo.project.Patch" name="Patch Demo 1" time="3.843325">
+    <failure message="Patch.feature:14 - status code was: 401, expected: 200, response time: 1046, url: https://reqres.in/api/users/2, response: {&quot;docs_url&quot;:&quot;https://app.reqres.in/docs#authentication&quot;,&quot;hint&quot;:&quot;Create a free key at app.reqres.in and send it as x-api-key.&quot;,&quot;example_curl&quot;:&quot;curl -H \&quot;x-api-key: YOUR_API_KEY\&quot; https://api.reqres.in/api/collections&quot;,&quot;_meta&quot;:{&quot;docs_url&quot;:&quot;https://app.reqres.in/documentation&quot;,&quot;cta&quot;:{&quot;label&quot;:&quot;Get a key&quot;,&quot;url&quot;:&quot;https://app.reqres.in/api-keys&quot;},&quot;powered_by&quot;:&quot;ReqRes&quot;,&quot;variant&quot;:&quot;v1_a&quot;,&quot;context&quot;:&quot;invalid_key&quot;,&quot;message&quot;:&quot;API key invalid or revoked. Create a new key in API Keys.&quot;,&quot;example_url&quot;:&quot;https://app.reqres.in/examples/notes-app&quot;,&quot;upgrade_url&quot;:&quot;https://app.reqres.in/upgrade&quot;},&quot;error&quot;:&quot;missing_api_key&quot;,&quot;message&quot;:&quot;The x-api-key header is required for this endpoint.&quot;,&quot;next_steps&quot;:[&quot;Go to app.reqres.in/api-keys to get your key&quot;,&quot;Add header: x-api-key: &lt;your_key&gt;&quot;,&quot;For app user endpoints, use Authorization: Bearer &lt;session_token&gt; instead&quot;]}">* url 'https://reqres.in/api' ............................................. passed
+* header Accept = 'application/json' ...................................... passed
+* header x-api-key = 'reqres-free-v1' ..................................... passed
+* def expectedOutput = read('response2.json') ............................. passed
+* def requestBody = read('request2.json') ................................. passed
+Given path '/users/2' ..................................................... passed
+And request {"name": "Carlos Rios", "job": "QA Leader"} ................... passed
+When method PATCH ......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Patch.feature:14 - status code was: 401, expected: 200, response time: 1046, url: https://reqres.in/api/users/2, response: {"docs_url":"https://app.reqres.in/docs#authentication","hint":"Create a free key at app.reqres.in and send it as x-api-key.","example_curl":"curl -H \"x-api-key: YOUR_API_KEY\" https://api.reqres.in/api/collections","_meta":{"docs_url":"https://app.reqres.in/documentation","cta":{"label":"Get a key","url":"https://app.reqres.in/api-keys"},"powered_by":"ReqRes","variant":"v1_a","context":"invalid_key","message":"API key invalid or revoked. Create a new key in API Keys.","example_url":"https://app.reqres.in/examples/notes-app","upgrade_url":"https://app.reqres.in/upgrade"},"error":"missing_api_key","message":"The x-api-key header is required for this endpoint.","next_steps":["Go to app.reqres.in/api-keys to get your key","Add header: x-api-key: &lt;your_key&gt;","For app user endpoints, use Authorization: Bearer &lt;session_token&gt; instead"]}&#13;
+	at ✽.Then status 200 (Patch.feature:14)&#13;
+
+And print response ........................................................ skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.com.demo.project.Patch" name="Patch Demo 2" time="0.710912">
+    <failure message="Patch.feature:22 - status code was: 401, expected: 200, response time: 697, url: https://reqres.in/api/users/2, response: {&quot;docs_url&quot;:&quot;https://app.reqres.in/docs#authentication&quot;,&quot;hint&quot;:&quot;Create a free key at app.reqres.in and send it as x-api-key.&quot;,&quot;example_curl&quot;:&quot;curl -H \&quot;x-api-key: YOUR_API_KEY\&quot; https://api.reqres.in/api/collections&quot;,&quot;_meta&quot;:{&quot;docs_url&quot;:&quot;https://app.reqres.in/documentation&quot;,&quot;cta&quot;:{&quot;label&quot;:&quot;Get a key&quot;,&quot;url&quot;:&quot;https://app.reqres.in/api-keys&quot;},&quot;powered_by&quot;:&quot;ReqRes&quot;,&quot;variant&quot;:&quot;v1_a&quot;,&quot;context&quot;:&quot;invalid_key&quot;,&quot;message&quot;:&quot;API key invalid or revoked. Create a new key in API Keys.&quot;,&quot;example_url&quot;:&quot;https://app.reqres.in/examples/notes-app&quot;,&quot;upgrade_url&quot;:&quot;https://app.reqres.in/upgrade&quot;},&quot;error&quot;:&quot;missing_api_key&quot;,&quot;message&quot;:&quot;The x-api-key header is required for this endpoint.&quot;,&quot;next_steps&quot;:[&quot;Go to app.reqres.in/api-keys to get your key&quot;,&quot;Add header: x-api-key: &lt;your_key&gt;&quot;,&quot;For app user endpoints, use Authorization: Bearer &lt;session_token&gt; instead&quot;]}">* url 'https://reqres.in/api' ............................................. passed
+* header Accept = 'application/json' ...................................... passed
+* header x-api-key = 'reqres-free-v1' ..................................... passed
+* def expectedOutput = read('response2.json') ............................. passed
+* def requestBody = read('request2.json') ................................. passed
+Given path '/users/2' ..................................................... passed
+And request {"name": "Carlos Rios", "job": "QA Leader"} ................... passed
+When method PATCH ......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Patch.feature:14 - status code was: 401, expected: 200, response time: 1046, url: https://reqres.in/api/users/2, response: {"docs_url":"https://app.reqres.in/docs#authentication","hint":"Create a free key at app.reqres.in and send it as x-api-key.","example_curl":"curl -H \"x-api-key: YOUR_API_KEY\" https://api.reqres.in/api/collections","_meta":{"docs_url":"https://app.reqres.in/documentation","cta":{"label":"Get a key","url":"https://app.reqres.in/api-keys"},"powered_by":"ReqRes","variant":"v1_a","context":"invalid_key","message":"API key invalid or revoked. Create a new key in API Keys.","example_url":"https://app.reqres.in/examples/notes-app","upgrade_url":"https://app.reqres.in/upgrade"},"error":"missing_api_key","message":"The x-api-key header is required for this endpoint.","next_steps":["Go to app.reqres.in/api-keys to get your key","Add header: x-api-key: &lt;your_key&gt;","For app user endpoints, use Authorization: Bearer &lt;session_token&gt; instead"]}&#13;
+	at ✽.Then status 200 (Patch.feature:14)&#13;
+
+And print response ........................................................ skipped
+* url 'https://reqres.in/api' ............................................. passed
+* header Accept = 'application/json' ...................................... passed
+* header x-api-key = 'reqres-free-v1' ..................................... passed
+* def expectedOutput = read('response2.json') ............................. passed
+* def requestBody = read('request2.json') ................................. passed
+Given path '/users/2' ..................................................... passed
+And request requestBody ................................................... passed
+When method PATCH ......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Patch.feature:22 - status code was: 401, expected: 200, response time: 697, url: https://reqres.in/api/users/2, response: {"docs_url":"https://app.reqres.in/docs#authentication","hint":"Create a free key at app.reqres.in and send it as x-api-key.","example_curl":"curl -H \"x-api-key: YOUR_API_KEY\" https://api.reqres.in/api/collections","_meta":{"docs_url":"https://app.reqres.in/documentation","cta":{"label":"Get a key","url":"https://app.reqres.in/api-keys"},"powered_by":"ReqRes","variant":"v1_a","context":"invalid_key","message":"API key invalid or revoked. Create a new key in API Keys.","example_url":"https://app.reqres.in/examples/notes-app","upgrade_url":"https://app.reqres.in/upgrade"},"error":"missing_api_key","message":"The x-api-key header is required for this endpoint.","next_steps":["Go to app.reqres.in/api-keys to get your key","Add header: x-api-key: &lt;your_key&gt;","For app user endpoints, use Authorization: Bearer &lt;session_token&gt; instead"]}&#13;
+	at ✽.Then status 200 (Patch.feature:22)&#13;
+
+And match response == expectedOutput ...................................... skipped
+And match $ == expectedOutput ............................................. skipped
+And print response ........................................................ skipped</failure>
+  </testcase>
+</testsuite>

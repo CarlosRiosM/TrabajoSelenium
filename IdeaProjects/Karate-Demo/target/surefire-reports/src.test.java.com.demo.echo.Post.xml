@@ -1,0 +1,11 @@
+<testsuite failures="0" name="src/test/java/com/demo/echo/Post.feature" skipped="0" tests="1" time="1.36192">
+  <testcase classname="src.test.java.com.demo.echo.Post" name="Post Demo 2" time="1.36192">
+    <system-out>* url 'https://postman-echo.com' .......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/post' ........................................................ passed
+And request {"name": "Carlos Rios", "job": "QA Analyst"} .................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed</system-out>
+  </testcase>
+</testsuite>

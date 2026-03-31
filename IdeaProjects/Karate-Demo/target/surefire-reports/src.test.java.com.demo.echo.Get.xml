@@ -1,0 +1,13 @@
+<testsuite failures="0" name="src/test/java/com/demo/echo/Get.feature" skipped="0" tests="1" time="4.01496">
+  <testcase classname="src.test.java.com.demo.echo.Get" name="Get Demo 1" time="4.01496">
+    <system-out>* url 'https://postman-echo.com' .......................................... passed
+* header Accept = 'application/json' ...................................... passed
+* def requestBody = read('request2.json') ................................. passed
+Given url 'https://postman-echo.com/get?name=Carlos&amp;lastName=Ríos&amp;Ig=carlos_riosm1983' . passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And print responseStatus .................................................. passed
+And print responseTime .................................................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,90 @@
+<testsuite failures="1" name="src/test/java/com/demo/echo/Post2.feature" skipped="0" tests="3" time="2.394189">
+  <testcase classname="src.test.java.com.demo.echo.Post2" name="Post Demo 2" time="1.900415">
+    <failure message="Post2.feature:17 - path: $, actual: {&quot;args&quot;:{},&quot;headers&quot;:{&quot;content-length&quot;:&quot;45&quot;,&quot;x-forwarded-proto&quot;:&quot;https&quot;,&quot;host&quot;:&quot;postman-echo.com&quot;,&quot;content-type&quot;:&quot;application\/json; charset=UTF-8&quot;,&quot;accept-encoding&quot;:&quot;gzip, br&quot;,&quot;user-agent&quot;:&quot;Apache-HttpClient\/4.5.5 (Java\/1.8.0_333)&quot;,&quot;accept&quot;:&quot;application\/json&quot;},&quot;data&quot;:{&quot;name&quot;:&quot;Carlos&quot;,&quot;Age&quot;:27,&quot;lastname&quot;:&quot;Ríos&quot;},&quot;form&quot;:{},&quot;files&quot;:{},&quot;json&quot;:{&quot;name&quot;:&quot;Carlos&quot;,&quot;Age&quot;:27,&quot;lastname&quot;:&quot;Ríos&quot;},&quot;url&quot;:&quot;https:\/\/postman-echo.com\/post&quot;}, expected: {name=Carlos, lastname=Ríos, Age=27}, reason: actual value has 4 more key(s) than expected: {args={}, headers={&quot;content-length&quot;:&quot;45&quot;,&quot;x-forwarded-proto&quot;:&quot;https&quot;,&quot;host&quot;:&quot;postman-echo.com&quot;,&quot;content-type&quot;:&quot;application\/json; charset=UTF-8&quot;,&quot;accept-encoding&quot;:&quot;gzip, br&quot;,&quot;user-agent&quot;:&quot;Apache-HttpClient\/4.5.5 (Java\/1.8.0_333)&quot;,&quot;accept&quot;:&quot;application\/json&quot;}, data={&quot;name&quot;:&quot;Carlos&quot;,&quot;Age&quot;:27,&quot;lastname&quot;:&quot;Ríos&quot;}, form={}, files={}, json={&quot;name&quot;:&quot;Carlos&quot;,&quot;Age&quot;:27,&quot;lastname&quot;:&quot;Ríos&quot;}, url=https://postman-echo.com/post}">* url 'https://postman-echo.com' .......................................... passed
+* header Accept = 'application/json' ...................................... passed
+* def expectedOutput = read('response1.json') ............................. passed
+* def requestBody = read('request1.json') ................................. passed
+* def requestBody2 = read('request1.json') ................................ passed
+Given path '/post' ........................................................ passed
+And request { "name": "Carlos", "lastname": "Ríos", "Age": 27 } ........... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match $ == expectedOutput ............................................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Post2.feature:17 - path: $, actual: {"args":{},"headers":{"content-length":"45","x-forwarded-proto":"https","host":"postman-echo.com","content-type":"application\/json; charset=UTF-8","accept-encoding":"gzip, br","user-agent":"Apache-HttpClient\/4.5.5 (Java\/1.8.0_333)","accept":"application\/json"},"data":{"name":"Carlos","Age":27,"lastname":"Ríos"},"form":{},"files":{},"json":{"name":"Carlos","Age":27,"lastname":"Ríos"},"url":"https:\/\/postman-echo.com\/post"}, expected: {name=Carlos, lastname=Ríos, Age=27}, reason: actual value has 4 more key(s) than expected: {args={}, headers={"content-length":"45","x-forwarded-proto":"https","host":"postman-echo.com","content-type":"application\/json; charset=UTF-8","accept-encoding":"gzip, br","user-agent":"Apache-HttpClient\/4.5.5 (Java\/1.8.0_333)","accept":"application\/json"}, data={"name":"Carlos","Age":27,"lastname":"Ríos"}, form={}, files={}, json={"name":"Carlos","Age":27,"lastname":"Ríos"}, url=https://postman-echo.com/post}&#13;
+	at ✽.And match $ == expectedOutput (Post2.feature:17)</failure>
+  </testcase>
+  <testcase classname="src.test.java.com.demo.echo.Post2" name="Post Demo 5" time="0.232003">
+    <system-out>* url 'https://postman-echo.com' .......................................... passed
+* header Accept = 'application/json' ...................................... passed
+* def expectedOutput = read('response1.json') ............................. passed
+* def requestBody = read('request1.json') ................................. passed
+* def requestBody2 = read('request1.json') ................................ passed
+Given path '/post' ........................................................ passed
+And request { "name": "Carlos", "lastname": "Ríos", "Age": 27 } ........... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match $ == expectedOutput ............................................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Post2.feature:17 - path: $, actual: {"args":{},"headers":{"content-length":"45","x-forwarded-proto":"https","host":"postman-echo.com","content-type":"application\/json; charset=UTF-8","accept-encoding":"gzip, br","user-agent":"Apache-HttpClient\/4.5.5 (Java\/1.8.0_333)","accept":"application\/json"},"data":{"name":"Carlos","Age":27,"lastname":"Ríos"},"form":{},"files":{},"json":{"name":"Carlos","Age":27,"lastname":"Ríos"},"url":"https:\/\/postman-echo.com\/post"}, expected: {name=Carlos, lastname=Ríos, Age=27}, reason: actual value has 4 more key(s) than expected: {args={}, headers={"content-length":"45","x-forwarded-proto":"https","host":"postman-echo.com","content-type":"application\/json; charset=UTF-8","accept-encoding":"gzip, br","user-agent":"Apache-HttpClient\/4.5.5 (Java\/1.8.0_333)","accept":"application\/json"}, data={"name":"Carlos","Age":27,"lastname":"Ríos"}, form={}, files={}, json={"name":"Carlos","Age":27,"lastname":"Ríos"}, url=https://postman-echo.com/post}&#13;
+	at ✽.And match $ == expectedOutput (Post2.feature:17)&#13;
+
+* url 'https://postman-echo.com' .......................................... passed
+* header Accept = 'application/json' ...................................... passed
+* def expectedOutput = read('response1.json') ............................. passed
+* def requestBody = read('request1.json') ................................. passed
+* def requestBody2 = read('request1.json') ................................ passed
+Given path '/post' ........................................................ passed
+And request requestBody2 .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And print expectedOutput .................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.demo.echo.Post2" name="Post Demo 6" time="0.261771">
+    <system-out>* url 'https://postman-echo.com' .......................................... passed
+* header Accept = 'application/json' ...................................... passed
+* def expectedOutput = read('response1.json') ............................. passed
+* def requestBody = read('request1.json') ................................. passed
+* def requestBody2 = read('request1.json') ................................ passed
+Given path '/post' ........................................................ passed
+And request { "name": "Carlos", "lastname": "Ríos", "Age": 27 } ........... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match $ == expectedOutput ............................................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Post2.feature:17 - path: $, actual: {"args":{},"headers":{"content-length":"45","x-forwarded-proto":"https","host":"postman-echo.com","content-type":"application\/json; charset=UTF-8","accept-encoding":"gzip, br","user-agent":"Apache-HttpClient\/4.5.5 (Java\/1.8.0_333)","accept":"application\/json"},"data":{"name":"Carlos","Age":27,"lastname":"Ríos"},"form":{},"files":{},"json":{"name":"Carlos","Age":27,"lastname":"Ríos"},"url":"https:\/\/postman-echo.com\/post"}, expected: {name=Carlos, lastname=Ríos, Age=27}, reason: actual value has 4 more key(s) than expected: {args={}, headers={"content-length":"45","x-forwarded-proto":"https","host":"postman-echo.com","content-type":"application\/json; charset=UTF-8","accept-encoding":"gzip, br","user-agent":"Apache-HttpClient\/4.5.5 (Java\/1.8.0_333)","accept":"application\/json"}, data={"name":"Carlos","Age":27,"lastname":"Ríos"}, form={}, files={}, json={"name":"Carlos","Age":27,"lastname":"Ríos"}, url=https://postman-echo.com/post}&#13;
+	at ✽.And match $ == expectedOutput (Post2.feature:17)&#13;
+
+* url 'https://postman-echo.com' .......................................... passed
+* header Accept = 'application/json' ...................................... passed
+* def expectedOutput = read('response1.json') ............................. passed
+* def requestBody = read('request1.json') ................................. passed
+* def requestBody2 = read('request1.json') ................................ passed
+Given path '/post' ........................................................ passed
+And request requestBody2 .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And print expectedOutput .................................................. passed
+* url 'https://postman-echo.com' .......................................... passed
+* header Accept = 'application/json' ...................................... passed
+* def expectedOutput = read('response1.json') ............................. passed
+* def requestBody = read('request1.json') ................................. passed
+* def requestBody2 = read('request1.json') ................................ passed
+Given path '/post' ........................................................ passed
+And def projectPath = karate.properties['user.dir'] ....................... passed
+And print projectPath ..................................................... passed
+And def filePath = projectPath+'/src/test/java/com.demo.echo/request1.json' . passed
+And print filePath ........................................................ passed
+And def requestBody = filePath ............................................ passed
+And request requestBody ................................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And print expectedOutput .................................................. passed</system-out>
+  </testcase>
+</testsuite>
